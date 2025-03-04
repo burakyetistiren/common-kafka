@@ -57,10 +57,12 @@ public class KafkaSinkConnector extends SinkConnector {
         return KafkaSinkTask.class;
     }
 
+    /** 
     @Override
     public List<Map<String, String>> taskConfigs(int totalConfigs) {
         return IntStream.range(0, totalConfigs).mapToObj(i -> config).collect(Collectors.toList());
     }
+    */
 
     @Override
     public void stop() {
