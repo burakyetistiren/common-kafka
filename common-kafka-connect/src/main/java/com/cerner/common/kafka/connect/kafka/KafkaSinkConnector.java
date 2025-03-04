@@ -66,6 +66,12 @@ public class KafkaSinkConnector extends SinkConnector {
 
     @Override
     public void stop() {
+        System.out.println("Stopping KafkaSinkConnector");
+        // Perform any necessary cleanup here   
+        // For example, close any resources or connections
+        // You can also log a message indicating that the connector is stopping
+        LOGGER.info("KafkaSinkConnector stopped");  
+        
     }
 
     @Override
