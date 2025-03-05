@@ -57,13 +57,21 @@ public class KafkaSinkConnector extends SinkConnector {
         return KafkaSinkTask.class;
     }
 
+    /** 
     @Override
     public List<Map<String, String>> taskConfigs(int totalConfigs) {
         return IntStream.range(0, totalConfigs).mapToObj(i -> config).collect(Collectors.toList());
     }
+    */
 
     @Override
     public void stop() {
+        System.out.println("Stopping KafkaSinkConnector");
+        // Perform any necessary cleanup here   
+        // For example, close any resources or connections
+        // You can also log a message indicating that the connector is stopping
+        LOGGER.info("KafkaSinkConnector stopped");  
+        
     }
 
     @Override
